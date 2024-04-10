@@ -1,13 +1,13 @@
 # Running the same code using Conda or Module loading
 
-This repository shows how to run the same code (*pytorch-gpu.py*) by either using [https://anaconda.org/anaconda/conda](Conda) or using module loading. It is important to stress that module loading is the Baskerville Team's preferred way of working as the module will be compiled with optimisations for Baskerville's configuration, and will be smaller due to having irrelevant options removed. If a module is missing, please contact us at*baskerville-tier2-support@contacts.bham.ac.uk* and we may be able to build it.
+This repository shows how to run the same code (*pytorch-gpu.py*) by either using [conda](https://anaconda.org/anaconda/conda) or using module loading. It is important to stress that module loading is the Baskerville Team's preferred way of working as the module will be compiled with optimisations for Baskerville's configuration, and will be smaller due to having irrelevant options removed. If a module is missing, please contact us at *baskerville-tier2-support@contacts.bham.ac.uk* and we may be able to build it.
 
-However, if time is short and you really need the latest and greatest, using Conda is an option. Whichever option you choose, you will need to change the account and qos in the following slurm scripts;
+However, if time is short and you really need the latest and greatest, using conda is an option. Whichever option you choose, you will need to change the *account* and *qos* in the following slurm scripts;
 
 + run-pytorch-gpu_with_conda.sh
 + run-pytorch-gpu_with_modules.sh
 
-You will also need to change the file *conda_env.sh* to point to a location outside your home directory where you can store the Conda environment. To create the conda environment, you can run this slurm script. It should take about 10 minutes to run.
+You will also need to change the file *conda_env.sh* to point to a location outside your home directory where you can store the conda environment. To create the conda environment, you can run this slurm script. It should take about 10 minutes to run.
 
 ```
 sbatch create_conda_env.sh
